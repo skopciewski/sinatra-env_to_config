@@ -39,8 +39,8 @@ end
 and then you can use it:
 
 ```ruby
-puts ENV['key1']      # -> 'some value' or nil
 puts settings.key1    # -> 'some value' or nil
+puts ENV['key1']      # -> 'some value' or nil
 ```
 
 ## Versioning

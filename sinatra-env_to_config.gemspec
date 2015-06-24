@@ -1,6 +1,10 @@
 # coding: utf-8
 
-require './lib/sinatra-env_to_config/version'
+begin
+  require './lib/sinatra-env_to_config/version'
+rescue LoadError
+  module SinatraEnvToConfig; VERSION = '0'; end
+end
 
 Gem::Specification.new do |spec|
   spec.name          = 'sinatra-env_to_config'
