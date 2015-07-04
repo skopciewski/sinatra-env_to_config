@@ -1,5 +1,5 @@
-require 'rspec'
-require 'rspec/given'
+require "rspec"
+require "rspec/given"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
