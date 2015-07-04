@@ -17,15 +17,19 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-require 'sinatra/base'
+require "sinatra/base"
 
 module Sinatra
   module EnvToConfig
     def env_to_config(*args)
-      args.each { |key| set key, find_value_for_key(key) }
+      args.each { |key| set standarize_key(key), find_value_for_key(key) }
     end
 
     private
+
+    def standarize_key(key)
+      key.to_s.downcase
+    end
 
     def find_value_for_key(key)
       key_string = key.to_s

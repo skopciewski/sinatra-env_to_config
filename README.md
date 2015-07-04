@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/sinatra-env_to_config.svg)](http://badge.fury.io/rb/sinatra-env_to_config)
 
 
-Provided methods:
+Provided method:
 * `env_to_config(key1, key2, ...)`
 
 which takes the proper values from ENV and places them in the settings.
@@ -39,8 +39,18 @@ end
 and then you can use it:
 
 ```ruby
-puts ENV['key1']      # -> 'some value' or nil
-puts settings.key1    # -> 'some value' or nil
+puts settings.key1    # -> 'foo'
+puts ENV['key1']      # -> 'foo'
+```
+
+You should give the same variable as in the ENV, as an argument to 
+the `env_to_config` function, but all variables are set in lower case:
+
+```ruby
+ENV['VaR1']   # => 'foo'
+env_to_config 'VaR1'
+settings.var1   # => 'foo'
+settings.VaR1   # => NoMethodError
 ```
 
 ## Versioning
