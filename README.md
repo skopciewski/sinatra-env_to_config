@@ -1,7 +1,8 @@
 # Sinatra EnvToConfig Extenstion
 
 [![Gem Version](https://badge.fury.io/rb/sinatra-env_to_config.svg)](http://badge.fury.io/rb/sinatra-env_to_config)
-
+[![Code Climate](https://codeclimate.com/github/skopciewski/sinatra-env_to_config/badges/gpa.svg)](https://codeclimate.com/github/skopciewski/sinatra-env_to_config)
+[![Dependency Status](https://gemnasium.com/badges/github.com/skopciewski/sinatra-env_to_config.svg)](https://gemnasium.com/github.com/skopciewski/sinatra-env_to_config)
 
 Provided method:
 * `env_to_config(key1, key2, ...)`

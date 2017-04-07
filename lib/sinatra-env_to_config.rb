@@ -1,6 +1,6 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
-# Copyright (C) 2015 Szymon Kopciewski
+# Copyright (C) 2015, 2016, 2017 Szymon Kopciewski
 #
 # This file is part of SinatraEnvToConfig
 #
@@ -18,3 +18,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 require "sinatra/env_to_config"
+require "sinatra-env_to_config/version"
