@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "spec_helper"
 require "sinatra/env_to_config"
 
@@ -40,13 +41,13 @@ module Sinatra
       Then { expect(app.settings.missing_key).to be_nil }
     end
 
-    context 'when key is a string' do
-      Given(:app) { mock_app { env_to_config 'string_key' } }
+    context "when key is a string" do
+      Given(:app) { mock_app { env_to_config "string_key" } }
       Then { expect(app.settings.string_key).to be_nil }
     end
 
-    context 'when key is in upper case' do
-      Given(:app) { mock_app { env_to_config 'UPPER_KEY' } }
+    context "when key is in upper case" do
+      Given(:app) { mock_app { env_to_config "UPPER_KEY" } }
       Then { expect(app.settings).to respond_to(:upper_key) }
       Then { expect(app.settings.upper_key).to be_nil }
       Then { expect(app.settings).not_to respond_to(:UPPER_KEY) }

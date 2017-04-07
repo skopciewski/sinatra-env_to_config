@@ -1,4 +1,4 @@
-# coding: utf-8
+# frozen_string_literal: true
 
 begin
   require "./lib/sinatra-env_to_config/version"
@@ -12,20 +12,22 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Szymon Kopciewski"]
   spec.email         = "s.kopciewski@gmail.com"
   spec.summary       = "The Sinatra extension for adding options from the env variables "
-  spec.description   = <<-EOF
+  spec.description   = <<~EOT
     Provides the dsl method for adding the configuration options ported
     from the matching env variables.
-  EOF
+  EOT
   spec.homepage      = "https://github.com/skopciewski/sinatra-env_to_config"
   spec.license       = "GPL-3.0"
 
   spec.require_paths = ["lib"]
   spec.files = Dir.glob("{bin,lib}/**/*") + \
-    %w(Gemfile LICENSE README.md CHANGELOG.md)
+               %w(Gemfile LICENSE README.md CHANGELOG.md)
 
-  spec.add_runtime_dependency "sinatra", ">=1.4"
-
+  spec.add_runtime_dependency "sinatra", "~>1", ">=1.4"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "pry"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec-given"
+  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "codeclimate-test-reporter"
 end
